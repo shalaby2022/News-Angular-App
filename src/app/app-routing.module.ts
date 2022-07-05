@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardGuard } from './auth/auth-guard.guard';
 import { HeadlineComponent } from './components/headline/headline.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
-import { RegisterComponent } from './components/register/register.component';
 import { TopBusinessComponent } from './components/top-business/top-business.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'business',component:TopBusinessComponent},
-  {path:'headline',component:HeadlineComponent},
-  {path:'login',component:LoginComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'readingList',component:ReadingListComponent}
+  {path:'business' ,canActivate:[AuthGuardGuard] ,component:TopBusinessComponent},
+  {path:'headline' ,canActivate:[AuthGuardGuard] ,component:HeadlineComponent},
+  {path:'readingList' ,canActivate:[AuthGuardGuard] ,component:ReadingListComponent},
+  {path:'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
+  {path:'**',component:ErrorComponent},
+
 ];
 
 @NgModule({

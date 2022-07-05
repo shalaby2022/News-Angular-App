@@ -1,0 +1,75 @@
+<div class="w-100 bgImg  p-5">
+    <form class="w-50 fw-bold fs-5 mx-auto px-5 py-2 border border-primary rounded-3" [formGroup]="registerForm" (ngSubmit)="sendData()">
+        <legend class="text-center fs-1 fw-bold text-light my-3">Register Now</legend>
+    
+        <div class="my-3">
+            <label for="FirstName" class="my-1 text-light fw-bold">FirstName</label>
+            <input type="text" id="FirstName" name="FirstName" formControlName="FirstName"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['FirstName'].invalid == true && getControls['FirstName'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['FirstName'].invalid == true && getControls['FirstName'].touched)">
+                <p *ngIf="getControls['FirstName'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+                <p *ngIf="getControls['FirstName'].errors?.['minlength']" class="text-danger fw-bold fs-5">You are below minLength!</p>
+                <p *ngIf="getControls['FirstName'].errors?.['maxlength']" class="text-danger fw-bold fs-5">You exceeded maxLength !</p>
+            </div>
+        </div>
+    
+        <div class="my-3">
+            <label for="LastName" class="my-1 text-light fw-bold">LastName</label>
+            <input type="text" id="LastName" name="LastName" formControlName="LastName"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['LastName'].invalid == true && getControls['LastName'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['LastName'].invalid == true && getControls['LastName'].touched)">
+                <p *ngIf="getControls['LastName'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+                <p *ngIf="getControls['LastName'].errors?.['minlength']" class="text-danger fw-bold fs-5">You are below minLength!</p>
+                <p *ngIf="getControls['LastName'].errors?.['maxlength']" class="text-danger fw-bold fs-5">You exceeded maxLength !</p>
+            </div>
+        </div>
+    
+        <div class="my-3">
+            <label for="Email" class="my-1 text-light fw-bold">Email</label>
+            <input type="Email" id="Email" name="Email" formControlName="Email"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['Email'].invalid == true && getControls['Email'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['Email'].invalid == true && getControls['Email'].touched)">
+                <p *ngIf="getControls['Email'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+            </div>
+        </div>
+    
+        <div class="my-3">
+            <label for="UserName" class="my-1 text-light fw-bold">UserName</label>
+            <input type="text" id="UserName" name="UserName" formControlName="UserName"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['UserName'].invalid == true && getControls['UserName'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['UserName'].invalid == true && getControls['UserName'].touched)">
+                <p *ngIf="getControls['UserName'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+                <p *ngIf="getControls['UserName'].errors?.['pattern']" class="text-danger fw-bold fs-5">This pattern is Not matched</p>
+            </div>
+        </div>
+    
+        <div class="my-3">
+            <label for="Password" class="my-1 text-light fw-bold">Password</label>
+            <input type="Password" id="Password" name="Password" formControlName="Password"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['Password'].invalid == true && getControls['Password'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['Password'].invalid == true && getControls['Password'].touched)">
+                <p *ngIf="getControls['Password'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+                <p *ngIf="getControls['Password'].errors?.['pattern']" class="text-danger fw-bold fs-5">Invalid Password Patten!</p>
+            </div>
+        </div>
+    
+        <div class="my-3">
+            <label for="ConfirmPssword" class="my-1 text-light fw-bold">ConfirmPssword</label>
+            <input type="Password" id="ConfirmPssword" name="ConfirmPssword" formControlName="ConfirmPssword"  class="form-control p-2 fw-bolder" 
+            [ngClass]="{'is-invalid' : (getControls['ConfirmPssword'].invalid == true && getControls['ConfirmPssword'].touched)}">
+            <div *ngIf="isSubmitted || (getControls['ConfirmPssword'].invalid == true && getControls['ConfirmPssword'].touched)">
+                <p *ngIf="getControls['ConfirmPssword'].errors?.['required']" class="text-danger fw-bold fs-5">Field is Required !</p>
+                <p *ngIf="getControls['ConfirmPssword'].errors?.['confirmedValidator']" class="text-danger fw-bold fs-5">Password Not Matched</p>
+            </div>
+        </div>
+        
+        <div class="my-3">
+            <input type="submit" class="btn btn-lg btn-primary px-3 my-3" value="Register"/>
+        </div>
+    
+        <div class="my-2">
+            <h4 class="text-center text-light">Already have account! <a routerLink="/auth/login" class="text-decoration-underline text-primary">login</a></h4>
+        </div>
+
+    </form>
+</div>
