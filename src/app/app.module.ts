@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +13,8 @@ import { HeadlineComponent } from './components/headline/headline.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
+import { HomeHeadlineCardsComponent } from './home-headline-cards/home-headline-cards.component';
+import { HomeTopbusinessCardsComponent } from './home-topbusiness-cards/home-topbusiness-cards.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,16 @@ import { ReadingListComponent } from './components/reading-list/reading-list.com
     HeadlineComponent,
     LoginComponent,
     RegisterComponent,
-    ReadingListComponent
+    ReadingListComponent,
+    HomeHeadlineCardsComponent,
+    HomeTopbusinessCardsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CardModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
