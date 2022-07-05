@@ -1,0 +1,12 @@
+
+<p-card
+[style]="{ width: '300px' }"
+styleClass="p-card-shadow"
+class="text-white"
+>
+<h5>{{ topbusiness.author }}</h5>
+<p>{{topbusiness.title}}</p>
+<ng-template pTemplate="header">
+  <img alt="Card" [src]="topbusiness.urlToImage" [ngStyle]="{'width.%' : 50}" />
+</ng-template>
+</p-card>
