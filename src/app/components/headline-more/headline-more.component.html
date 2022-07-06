@@ -1,0 +1,20 @@
+
+
+<p-card
+[style]="{ width: '300px' }"
+styleClass="p-card-shadow"
+class="text-white"
+>
+<h5>{{ headline.author }}</h5>
+<p>{{headline.title}}</p>
+<ng-template pTemplate="header">
+  <img alt="Card" [src]="headline.urlToImage" [ngStyle]="{'width.%' : 50}" />
+</ng-template>
+<button
+pButton
+type="button"
+label="Show details"
+class="py-2 px-3 bg-primary text-white rounded"
+(click)="showDetails(index)"
+></button>
+</p-card>

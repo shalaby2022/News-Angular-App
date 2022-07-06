@@ -1,3 +1,4 @@
+import { FetchDataServiceService } from './../../fetch-data-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBusinessComponent implements OnInit {
 
-  constructor() { }
+  topbusinessArray : Array<any> = []
+
+  constructor(private _topbusinessFetch : FetchDataServiceService) { }
 
   ngOnInit(): void {
+    this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
+      console.log(res.articles)
+      this.topbusinessArray = res.articles
+    })
   }
 
 }

@@ -1,3 +1,5 @@
+import { HeadlineDetailsComponent } from './components/headline-details/headline-details.component';
+import { TopBusinessDetailsComponent } from './components/top-business-details/top-business-details.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardGuard } from './auth/auth-guard.guard';
@@ -13,6 +15,8 @@ const routes: Routes = [
   {path:'business' ,canActivate:[AuthGuardGuard] ,component:TopBusinessComponent},
   {path:'headline' ,canActivate:[AuthGuardGuard] ,component:HeadlineComponent},
   {path:'readingList' ,canActivate:[AuthGuardGuard] ,component:ReadingListComponent},
+  {path: "headlinedetails/:id" , component: HeadlineDetailsComponent},
+  {path: "topbusinessdetails/:id" , component:TopBusinessDetailsComponent},
   {path:'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   {path:'**',component:ErrorComponent},
 

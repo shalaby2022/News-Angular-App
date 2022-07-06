@@ -15,6 +15,10 @@ import { HomeHeadlineCardsComponent } from './home-headline-cards/home-headline-
 import { HomeTopbusinessCardsComponent } from './home-topbusiness-cards/home-topbusiness-cards.component';
 import { ErrorComponent } from './error/error.component';
 import { AuthModule } from './auth/auth.module';
+import { HeadlineMoreComponent } from './components/headline-more/headline-more.component';
+import { HeadlineDetailsComponent } from './components/headline-details/headline-details.component';
+import { TopBusinessMoreComponent } from './components/top-business-more/top-business-more.component';
+import { TopBusinessDetailsComponent } from './components/top-business-details/top-business-details.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { AuthModule } from './auth/auth.module';
     ReadingListComponent,
     HomeHeadlineCardsComponent,
     HomeTopbusinessCardsComponent,
-    ErrorComponent
+    ErrorComponent,
+    HeadlineMoreComponent,
+    HeadlineDetailsComponent,
+    TopBusinessMoreComponent,
+    TopBusinessDetailsComponent
   ],
   imports: [
     BrowserModule,
