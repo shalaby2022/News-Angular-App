@@ -10,11 +10,16 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { TopBusinessComponent } from './components/top-business/top-business.component';
 import { HeadlineComponent } from './components/headline/headline.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
 import { HomeHeadlineCardsComponent } from './home-headline-cards/home-headline-cards.component';
 import { HomeTopbusinessCardsComponent } from './home-topbusiness-cards/home-topbusiness-cards.component';
+import { ErrorComponent } from './error/error.component';
+import { AuthModule } from './auth/auth.module';
+import { HeadlineMoreComponent } from './components/headline-more/headline-more.component';
+import { HeadlineDetailsComponent } from './components/headline-details/headline-details.component';
+import { TopBusinessMoreComponent } from './components/top-business-more/top-business-more.component';
+import { TopBusinessDetailsComponent } from './components/top-business-details/top-business-details.component';
+
 
 @NgModule({
   declarations: [
@@ -23,18 +28,22 @@ import { HomeTopbusinessCardsComponent } from './home-topbusiness-cards/home-top
     HomeComponent,
     TopBusinessComponent,
     HeadlineComponent,
-    LoginComponent,
-    RegisterComponent,
     ReadingListComponent,
     HomeHeadlineCardsComponent,
-    HomeTopbusinessCardsComponent
+    HomeTopbusinessCardsComponent,
+    ErrorComponent,
+    HeadlineMoreComponent,
+    HeadlineDetailsComponent,
+    TopBusinessMoreComponent,
+    TopBusinessDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

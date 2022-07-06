@@ -1,1 +1,10 @@
-<p>top-business works!</p>
+
+<div class="container-fluid bg-black">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mt-5" *ngFor="let topbusiness of topbusinessArray ; let i=index">
+                <app-top-business-more [topbusiness]="topbusiness" [index] = "i"></app-top-business-more>
+            </div>
+        </div>
+    </div>
+</div>

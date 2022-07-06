@@ -2,26 +2,34 @@
 <div class="container bg-black">
     <img [src]="imagURL" alt="hero_image" class="img-fluid w-100 m-auto" />
   <div class="row">
+    <a routerLink="/headline">
     <h2 class="text-white text-decoration-underline my-4">Headlines</h2>
+  </a>
     <div *ngFor="let headline of HeadlineItems" class="col-4 my-4">
       <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
     </div>
+    <a routerLink="/headline" class="w-25 m-auto">
     <button
       pButton
       type="button"
       label="View more"
-      class="w-25 m-auto py-2"
+      class="py-2 px-5"
     ></button>
+  </a>
+  <a routerLink="/business">
     <h2 class="text-white text-decoration-underline my-4">Top Business</h2>
+  </a>
     <div *ngFor="let topbusiness of TopbusinessItem" class="col-4 my-4">
       <app-home-topbusiness-cards [topbusiness]="topbusiness"></app-home-topbusiness-cards>
     </div>
+    <a routerLink="/business" class="w-25 m-auto">
     <button
       pButton
       type="button"
       label="View more"
-      class="w-25 m-auto py-2"
+      class="py-2 px-5"
     ></button>
+  </a>
   </div>
 </div>
 
