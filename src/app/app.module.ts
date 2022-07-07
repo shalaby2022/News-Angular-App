@@ -19,6 +19,8 @@ import { HeadlineMoreComponent } from './components/headline-more/headline-more.
 import { HeadlineDetailsComponent } from './components/headline-details/headline-details.component';
 import { TopBusinessMoreComponent } from './components/top-business-more/top-business-more.component';
 import { TopBusinessDetailsComponent } from './components/top-business-details/top-business-details.component';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { TopBusinessDetailsComponent } from './components/top-business-details/t
     HeadlineMoreComponent,
     HeadlineDetailsComponent,
     TopBusinessMoreComponent,
-    TopBusinessDetailsComponent
+    TopBusinessDetailsComponent,
+    SearchComponent,
+ 
+   
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ import { TopBusinessDetailsComponent } from './components/top-business-details/t
     HttpClientModule,
     CardModule,
     ButtonModule,
-    AuthModule
+    AuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
