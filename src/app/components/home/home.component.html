@@ -1,5 +1,5 @@
-
-<div class="container bg-black">
+<ng-container *ngIf="inputValue=='';else second " >
+  <div class="container bg-black">
     <img [src]="imagURL" alt="hero_image" class="img-fluid w-100 m-auto" />
   <div class="row">
     <a routerLink="/headline">
@@ -32,4 +32,36 @@
   </a>
   </div>
 </div>
+</ng-container>
+
+<ng-template #second >
+
+  <div class="text-center wrapper">
+     <div class="container">
+        <div class="row">
+          
+          <div class="col-lg-3 col-md-6" *ngFor="let data of filteredData" >
+            <div class="card" [style]="{height:'400px'}">
+              <div class="card-body">
+                <div class="card-title">
+                  <h6>{{data.author}}</h6>
+                  <h6>{{data.title}}</h6>
+                  <h6>{{data.description}}</h6>
+                  <div class="img-wrapper" [ngStyle]="{height:'100px'}">
+
+                    <!-- <img  class="img-fluid rounded" [src]="data.urlToImage" alt="" [style]="{objectFit:'contain'}"> -->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+</ng-template>
+
+ 
+
+
 
