@@ -7,7 +7,10 @@
     <h5 class="card-title">{{ headline.author }}</h5>
     <p class="card-text">{{headline.title}}</p>
     <p>{{headline.publishedAt|date}}</p>
-    <button class="btn btn-primary" (click)="showDetails(index)">Show details</button>
+
+      <button class="btn btn-warning"  (click)="showDetails(index)">Show details</button>
+      <i class="fa-solid fa-star fa-2x" (click)="readingListClicked()" [ngClass]="changeReadingColor?'readingClicked':' ' "></i>
+  
   </div>
 </div>
 
