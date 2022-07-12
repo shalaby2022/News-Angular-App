@@ -1,0 +1,51 @@
+
+
+tr{
+    color: white !important;
+
+    max-height: 200px;
+    width:100%;
+}
+
+th{
+    text-align: center;
+
+}
+
+td{
+   
+    text-align: left;
+    vertical-align: middle;
+    padding: 20px 10px;
+   
+}
+
+p{
+    display: flex;
+    align-items: center;
+}
+p,h6{
+    height: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces
+    
+    
+}
+
+i.fa-trash{
+    color: orange;
+    font-size: 3rem;
+    transition: 0.3s all;
+}
+i.fa-trash:hover{
+    color: rgb(184, 121, 4);
+    cursor: pointer;
+}
+
+
+@media (max-width:768px){
+    i.fa-trash{
+        font-size: 2rem;
+    }
+}

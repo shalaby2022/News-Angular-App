@@ -17,7 +17,9 @@ export class TopBusinessComponent implements OnInit {
     this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
       console.log(res.articles)
       this.topbusinessArray = res.articles
-    },(err)=>{this.topbusinessArray=staticTopBusiness})
+    },(err)=>{this.topbusinessArray=staticTopBusiness.map(ele =>{
+      return {...ele,reading:false}
+    })})
   }
 
 }

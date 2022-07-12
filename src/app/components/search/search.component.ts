@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
   onSearch(target:any){
     // function gets called when the input value gets changed.
     this.search.onSearch(target)
-  
+    // console.log('input',target)
   }
 
     

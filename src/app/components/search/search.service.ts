@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 // import { FetchDataServiceService } from './fetch-data-service.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { FetchDataServiceService } from 'src/app/fetch-data-service.service';
+import { staticTopBusiness, staticTopBusinessHeadline } from 'src/app/staticData';
 
 
 // mainly fetching the data from the apis and 
@@ -23,16 +24,20 @@ export class SearchService {
       
       this.getData(res.articles)
   
+    },(err)=>{
+      this.getData(staticTopBusiness)
     })
     this.data.getHeadLineData().subscribe(res =>{
       
       this.getData(res.articles)
+    },(err)=>{
+      this.getData(staticTopBusinessHeadline)
     })
    }
 
    getData(articles:any[]){
     this.news=[...this.news,...articles]
-   
+  //  console.log('data',this.news)
 
     
    }
@@ -54,6 +59,7 @@ export class SearchService {
      if(this.saveFilteredData.length){
       // updating the observable with the new value every time the input changed
       this.filteredData.next([...this.saveFilteredData])
+      console.log('this.filteredData',this.saveFilteredData)
      }
     //  console.log('FilteredSearch',this.filteredData)
    }
