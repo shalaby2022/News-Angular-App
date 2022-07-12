@@ -1,1 +1,58 @@
-<p>reading-list works!</p>
+<div class="container">
+    
+        <div *ngIf="list.length;else second">
+            <div class="row">
+
+                <div class="col-lg-10 mx-auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <!-- <th>#id</th> -->
+                                <th>Author</th>
+                                <th>Title</th>
+                                <th>image</th>
+                                <th>Content</th>
+                                <th>Delete</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr class=" mb-3" *ngFor="let item of list; let i=index">
+
+
+                                <!-- <td>{{i}}</td> -->
+                                <td>
+                                    <h5>{{item.content.author}}</h5>
+                                </td>
+                                <td style="text-overflow:ellipsis">
+                                    <p>{{item.content.title}}</p>
+                                </td>
+                                <td>
+                                    <img [src]="item.content.urlToImage" alt="" style="object-fit: cover;"
+                                        class="rounded img-fluid">
+                                </td>
+                                <td style="max-lines: 2;max-width:200px;text-overflow:ellipsis">
+                                    <p class="lead">{{item.content.content}}</p>
+                                </td>
+                                <td>
+                                    <i class="fa-solid fa-trash " (click)="deletFromList(i)"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <ng-template #second>
+            <div class="row">
+                <div class="col-lg-10 mx-auto "style="text-align:'center'; color:'orange'">
+                    <span style="font-size: 100px">😯</span>
+                    <h2>Your Reading List is Empty </h2>
+                    <a  class="h2" routerLink="/home" style="text-decoration: none;color:'orange'">GOHOME</a>
+                </div>
+            </div>
+        </ng-template>
+
+   
+</div>

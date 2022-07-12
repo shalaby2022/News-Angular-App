@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchDataServiceService } from 'src/app/fetch-data-service.service';
 import { SearchService } from '../search/search.service';
 import {staticTopBusinessHeadline,staticTopBusiness} from '../../staticData'
+import { elementAt } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -35,8 +36,12 @@ export class HomeComponent implements OnInit {
       console.log("new product is ... " , this.HeadlineItems)
     },
     (err:any)=> {console.log("Error");
-    this.fetchedHeadlineData=staticTopBusinessHeadline;
-    this.HeadlineItems=staticTopBusinessHeadline
+    this.fetchedHeadlineData=staticTopBusinessHeadline.map(ele => {
+      return {...ele , reading:false}
+    });
+    this.HeadlineItems=staticTopBusinessHeadline.map(ele =>{
+      return {...ele,reading:false}
+    })
     },
     ()=> console.log("complete"))
 
@@ -47,18 +52,25 @@ export class HomeComponent implements OnInit {
       this.TopbusinessItem = this.TopbusinessItem.slice(17)
     },
     (err:any)=> {console.log("Error")
-    this.fetchedTopbusinessData=staticTopBusiness;
-    this.TopbusinessItem=staticTopBusiness},
+    this.fetchedTopbusinessData=staticTopBusiness.map(ele => {
+      return {...ele,reading:false}
+    });
+    this.TopbusinessItem=staticTopBusiness.map(ele =>{
+      return {...ele,reading:false}
+    })
+    console.log('headline',this.HeadlineItems)
+  },
     ()=> console.log("complete"))
 
   this.search.getFilteredData().subscribe(res =>{
     this.filteredData=res;
     
   },(err:any)=>{
-    this.filteredData=[...staticTopBusiness,...staticTopBusinessHeadline]
+    this.filteredData=[...this.fetchedHeadlineData,...this.fetchedTopbusinessData]
   })
   this.search.inputValue.subscribe(res => {
     this.inputValue=res;
+    
   })
   }
 
