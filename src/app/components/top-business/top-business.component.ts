@@ -1,5 +1,6 @@
 import { FetchDataServiceService } from './../../fetch-data-service.service';
 import { Component, OnInit } from '@angular/core';
+import { staticTopBusiness } from 'src/app/staticData';
 
 @Component({
   selector: 'app-top-business',
@@ -16,7 +17,7 @@ export class TopBusinessComponent implements OnInit {
     this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
       console.log(res.articles)
       this.topbusinessArray = res.articles
-    })
+    },(err)=>{this.topbusinessArray=staticTopBusiness})
   }
 
 }

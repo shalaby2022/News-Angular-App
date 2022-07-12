@@ -1,9 +1,15 @@
 i{
     position:absolute;
     top: 23px;
-    right: 10px;
+    right: 25px;
     font-size: 30px;
-    color: #fcb900;
+    color: #f1f1f1;
+    transition: 0.3s all;
+}
+i.fa-star:hover{
+color: #fcb900;
+cursor: pointer;
+
 }
 
 h6{
@@ -27,3 +33,12 @@ h6{
     border-radius: 15px;
   }
   
+  button{
+    font-size: 22px;
+    font-weight: 300;
+    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .readingClicked{
+    color: #fcb900;
+  }

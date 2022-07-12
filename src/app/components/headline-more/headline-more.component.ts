@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./headline-more.component.scss']
 })
 export class HeadlineMoreComponent implements OnInit {
-
+  changeReadingColor:Boolean=false;
   @Input("headline") headline:any
   @Input("index") index:any
 
@@ -19,5 +19,9 @@ export class HeadlineMoreComponent implements OnInit {
   showDetails(index:number){
     console.log("headline index is ... " , index)
     this._route.navigate(["headlinedetails/" , index])
+  }
+  readingListClicked(){
+    console.log('clicked')
+    this.changeReadingColor=true;
   }
 }

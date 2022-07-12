@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchDataServiceService } from 'src/app/fetch-data-service.service';
+import { staticTopBusinessHeadline } from 'src/app/staticData';
 
 @Component({
   selector: 'app-headline',
@@ -17,6 +18,8 @@ export class HeadlineComponent implements OnInit {
     this._headlineData.getHeadLineData().subscribe((res:any)=>{
       console.log("results : " , res.articles)
       this.headlineArray = res.articles
+    },(err:any)=>{
+      this.headlineArray=staticTopBusinessHeadline;
     })
   }
 
