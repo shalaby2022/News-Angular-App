@@ -21,6 +21,8 @@ import { TopBusinessMoreComponent } from './components/top-business-more/top-bus
 import { TopBusinessDetailsComponent } from './components/top-business-details/top-business-details.component';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './components/search/search.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { SearchComponent } from './components/search/search.component';
     TopBusinessMoreComponent,
     TopBusinessDetailsComponent,
     SearchComponent,
+    SliderComponent,
+    FooterComponent,
  
    
   ],
