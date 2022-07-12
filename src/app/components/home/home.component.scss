@@ -1,15 +1,20 @@
-img{
-    height: 27.75rem;
-}
-button{
-    background-color: #165598;
-    color: white;
-    border-radius: 7px;
-}
-
 
 
 .wrapper{
     height: 100vh;
-    
+
+}
+
+.btnMore{
+    border: 1px solid #fcb900;
+    padding: 10px 20px;
+    background: black;
+    color: #fcb900;
+    border-radius: 10px;
+}
+
+.btnMore:hover{
+
+    color: black;
+    background: #fcb900;
 }

@@ -1,12 +1,15 @@
 
-<p-card
-[style]="{ width: '300px' }"
-styleClass="p-card-shadow"
-class="text-white"
->
-<h5>{{ headline.author }}</h5>
-<p>{{headline.title}}</p>
-<ng-template pTemplate="header">
-  <img alt="Card" [src]="headline.urlToImage" [ngStyle]="{'width.%' : 50}" />
-</ng-template>
-</p-card>
+<div class="card   bg-black ">
+  <div class="row">
+    <div class="col-md-5">
+      <img [src]="headline.urlToImage" class="img-fluid  " alt="...">
+    </div>
+    <div class="col-md-7">
+      <div class="card-body mt-3">
+        <h6 class="card-title">{{ headline.author }}</h6>
+        <p class="card-text">{{headline.title}}</p>
+        <p class="text-white-50"><em><small>{{headline.publishedAt | date}}</small></em></p>
+      </div>
+    </div>
+  </div>
+</div>

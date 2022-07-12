@@ -1,22 +1,11 @@
-
-
-<p-card
-[style]="{ width: '300px' }"
-styleClass="p-card-shadow"
-class="text-white"
->
-<h5>{{ topbusiness.author }}</h5>
-<p>{{topbusiness.title}}</p>
-<ng-template pTemplate="header">
-  <img alt="Card" [src]="topbusiness.urlToImage" [ngStyle]="{'width.%' : 50}" />
-</ng-template>
-<button
-pButton
-type="button"
-label="Show details"
-class="py-2 px-3 bg-primary text-white rounded"
-(click)="showDetails(index)"
-></button>
-</p-card>
-
+<div class="card  bg-black " style="width: 25rem;">
+  <img [src]="topbusiness.urlToImage" class="card-img-top " alt="...">
+  <div class="card-body ">
+    <h5 class="card-title">{{ topbusiness.author }}</h5>
+    <p class="card-text">{{topbusiness.title}}</p>
+    <p>{{topbusiness.publishedAt|date}}</p>
+    <i class="fa-solid fa-star"></i>
+    <button class="btn btn-primary" (click)="showDetails(index)">Show details</button>
+  </div>
+</div>
 

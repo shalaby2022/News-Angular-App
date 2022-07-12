@@ -1,67 +1,68 @@
-<ng-container *ngIf="inputValue=='';else second " >
-  <div class="container bg-black">
-    <img [src]="imagURL" alt="hero_image" class="img-fluid w-100 m-auto" />
-  <div class="row">
-    <a routerLink="/headline">
-    <h2 class="text-white text-decoration-underline my-4">Headlines</h2>
-  </a>
-    <div *ngFor="let headline of HeadlineItems" class="col-4 my-4">
-      <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
+<app-slider></app-slider>
+
+
+<ng-container *ngIf="inputValue == ''; else second">
+  <div class="container  mt-5">
+    <div class="row  pb-5">
+      
+        <h2
+         class="mt-5 text-light"><i class="fab fa-accusoft me-2"></i>Headlines</h2>
+        <div class=" col-5">
+      <div *ngFor="let headline of HeadlineItems" class="my-4">
+        <app-home-headline-cards [headline]="headline"></app-home-headline-cards>  
+      </div>
+      <a routerLink="/headline" class="w-25 m-auto d-block  mt-5 ">
+        <button type="button" class="btnMore  ">VIEW MORE</button>
+      </a>
     </div>
-    <a routerLink="/headline" class="w-25 m-auto">
-    <button
-      pButton
-      type="button"
-      label="View more"
-      class="py-2 px-5"
-    ></button>
-  </a>
-  <a routerLink="/business">
-    <h2 class="text-white text-decoration-underline my-4">Top Business</h2>
-  </a>
-    <div *ngFor="let topbusiness of TopbusinessItem" class="col-4 my-4">
-      <app-home-topbusiness-cards [topbusiness]="topbusiness"></app-home-topbusiness-cards>
+      <div class="col-5">
+        <img src="">
+      </div> 
+    
+      </div>
+
+
+
+
+      <div  class="row ">
+        <div class="py-5">
+          <hr class="rounded bg-white">
+
+        </div>
+        <h2 class="mt-5 text-light mb-5"><i class="fab fa-accusoft me-2"></i>Business</h2>
+        <div  class="d-flex  flex-wrap ">
+          <div *ngFor="let topbusiness of TopbusinessItem" class="col-4 my-4 ">
+            <app-home-topbusiness-cards [topbusiness]="topbusiness" ></app-home-topbusiness-cards>
+          </div>
     </div>
-    <a routerLink="/business" class="w-25 m-auto">
-    <button
-      pButton
-      type="button"
-      label="View more"
-      class="py-2 px-5"
-    ></button>
-  </a>
+    <a routerLink="/headline" class=" text-decoration-none mt-5">
+      <button type="button" class="btnMore  d-block m-auto ">VIEW MORE</button>
+    </a>
+      </div>
+     
+ 
   </div>
-</div>
 </ng-container>
 
-<ng-template #second >
-
+<ng-template #second>
   <div class="text-center wrapper">
-     <div class="container">
-        <div class="row">
-          
-          <div class="col-lg-3 col-md-6" *ngFor="let data of filteredData" >
-            <div class="card" [style]="{height:'400px'}">
-              <div class="card-body">
-                <div class="card-title">
-                  <h6>{{data.author}}</h6>
-                  <h6>{{data.title}}</h6>
-                  <h6>{{data.description}}</h6>
-                  <div class="img-wrapper" [ngStyle]="{height:'100px'}">
-
-                    <!-- <img  class="img-fluid rounded" [src]="data.urlToImage" alt="" [style]="{objectFit:'contain'}"> -->
-                  </div>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6" *ngFor="let data of filteredData">
+          <div class="card" [style]="{ height: '400px' }">
+            <div class="card-body">
+              <div class="card-title">
+                <h6>{{ data.author }}</h6>
+                <h6>{{ data.title }}</h6>
+                <h6>{{ data.description }}</h6>
+                <div class="img-wrapper" [ngStyle]="{ height: '100px' }">
+                  <!-- <img  class="img-fluid rounded" [src]="data.urlToImage" alt="" [style]="{objectFit:'contain'}"> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </ng-template>
-
- 
-
-
-
