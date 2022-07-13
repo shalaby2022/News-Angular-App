@@ -7,6 +7,7 @@ const  readingListReducer=createReducer(
     initialState,
     on(readingList_Add, (state,action)=>{
         const exist=state.find((ele )=>{
+            
             return ele.content.id ==action.content.id && ele.content.category == action.content.category;
         })
        
