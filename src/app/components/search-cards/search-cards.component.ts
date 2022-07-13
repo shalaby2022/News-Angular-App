@@ -22,8 +22,11 @@ export class SearchCardsComponent implements OnInit {
     this.store.dispatch(readingList_Add({ content: { ...this.filteredData[index], id: index, category: 'headline' } }))
   }
 
-  showDetails(index: number) {
-    console.log("headline index is ... ", index)
-    this._route.navigate(["headlinedetails/", index])
+  showDetails(data:any) {
+    console.log('data from show Details',data)
+    console.log("headline index is ... ", data.id)
+    data.category=='business'?this._route.navigate([`/topbusinessdetails/${data.id}`]):this._route.navigate([`/headlinedetails/${data.id}`])
+   
+
   }
 }

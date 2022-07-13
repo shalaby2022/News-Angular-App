@@ -22,17 +22,28 @@ export class SearchService {
   constructor(private data:FetchDataServiceService) {
 
     this.data.getTopBusinessData().subscribe(res =>{
-      
-      this.getData(res.articles)
+     let resArr=  res.articles.map((ele:any,index:any)=>{
+        return {...ele,category:'business',id:index}
+       })
+      this.getData(resArr)
   
     },(err)=>{
-      this.getData(staticTopBusiness)
+      let resArr=staticTopBusiness.map((ele:any,index:any)=>{
+        return {...ele,category:'business',id:index}
+       })
+      this.getData(resArr)
+      
     })
     this.data.getHeadLineData().subscribe(res =>{
-      
-      this.getData(res.articles)
+      let resArr=  res.articles.map((ele:any,index:any)=>{
+        return {...ele,category:'headline',id:index}
+       })
+      this.getData(resArr)
     },(err)=>{
-      this.getData(staticTopBusinessHeadline)
+      let resArr= staticTopBusinessHeadline.map((ele:any,index:any)=>{
+        return {...ele,category:'headline',id:index}
+       })
+      this.getData(resArr)
     })
    }
 

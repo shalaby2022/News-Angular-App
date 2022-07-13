@@ -1,5 +1,5 @@
 <div class="card  bg-black " >
-  <img [src]="topbusiness.urlToImage" class="card-img-top w-100 "  alt="..."  style="height:200px;
+  <img [src]="topbusiness.urlToImage || 'https://placeholder.pics/svg/600' " class="card-img-top w-100 "  alt="..."  style="height:200px;
      border-top-left-radius:1rem;border-top-right-radius:1rem;object-fit: cover;" />
   <div class="card-body ">
     <h5 class="card-title">{{ topbusiness.author }}</h5>
