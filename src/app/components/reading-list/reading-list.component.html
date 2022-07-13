@@ -33,7 +33,7 @@
                                     <div class="img-wrapper">
 
                                         <img  [src]="item.content.urlToImage" alt="" style="object-fit: cover ;cursor: pointer ; "
-                                            class="rounded w-100" (click)="navigateToDetails(item.content)">
+                                            class="rounded w-100" (click)="navigateToDetails(item.content,i)">
                                         <span class="flag rounded">{{item.content.category}}</span>
                                     </div>
                                 </td>
