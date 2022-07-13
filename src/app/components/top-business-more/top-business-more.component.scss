@@ -1,40 +1,47 @@
-i{
-    position:absolute;
-    top: 23px;
-    right: 25px;
-    font-size: 30px;
-    color: #ccc;
-    transition: 0.3s all;
-}
-i.fa-star:hover{
-color: #fcb900;
-cursor: pointer;
-
-}
-
 h6{
-    color: #fcb900;
-    font-size: 15px;
-  }
-  h5{
-    color: #fcb900;
-    font-size: 15px;
-  }
-  
-  
-  p{
-    color: aliceblue;
-  }
-  
-  
-  
-  .card{
-    border: 1px solid gray;
-    border-radius: 15px;
-  }
-  
-  button{
-    font-size: 22px;
-    font-weight: 300;
-    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  color: #fcb900;
+  font-size: 15px;
+}
+h5{
+  color: #fcb900;
+  font-size: 15px;
+}
+
+
+p{
+  color: aliceblue;
+}
+
+
+
+.card{
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+
+button{
+  font-size: 22px;
+  font-weight: 300;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.readingClicked{
+  color: #fcb900;
+}
+
+
+.button-wrapper button{
+  background-color: #fcb900;
+  font-weight: 400;
+  border: 2px solid black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s all;
+
+
+}
+
+.button-wrapper button:hover{
+  background:transparent;
+  border:2px solid #fcb900;
+  color: #f1f1f1;
+}

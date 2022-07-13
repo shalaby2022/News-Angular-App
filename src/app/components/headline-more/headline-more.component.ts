@@ -34,7 +34,7 @@ export class HeadlineMoreComponent implements OnInit {
   
   saveToRead(){
     // this._route.navigate(['/readingList'])
-    this.store.dispatch(readingList_Add({content:{...this.headline,id:this.index}}))
+    this.store.dispatch(readingList_Add({content:{...this.headline,id:this.index,category:'headline'}}))
   }
   
   
