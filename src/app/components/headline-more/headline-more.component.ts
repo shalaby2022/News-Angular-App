@@ -29,6 +29,7 @@ export class HeadlineMoreComponent implements OnInit {
   }
   showDetails(index:number){
     console.log("headline index is ... " , index)
+    console.log('headLine',this.headline)
     this._route.navigate(["headlinedetails/" , index])
   }
   

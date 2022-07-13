@@ -5,7 +5,7 @@
           <div class="card bg-black" [style]="{ height:'410px',margin:'50px 0' }"  data="homeData">
            
               <div> 
-                 <img [src]="data.urlToImage" class="w-100"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
+                 <img [src]="data.urlToImage || 'https://placeholder.pics/svg/600'" class="w-100"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
                  
               </div>
               <div class="card-body text-white my-3 text-start">
@@ -24,7 +24,7 @@
             
                 <div class="button-wrapper d-flex align-items-center justify-content-around">
             
-                  <button class="btn btn-warning btnMore"  (click)="showDetails(i)">Show details</button>
+                  <button class="btn btn-warning btnMore"  (click)="showDetails(data)">Show details</button>
                   <button class="btn btn-warning btnMore" (click)="saveToRead(i)">SaveToRead</button>
                 </div>
               

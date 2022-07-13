@@ -19,6 +19,7 @@ export class TopBusinessMoreComponent implements OnInit {
   }
 
   showDetails(index:number){
+    console.log('topBusiness',this.topbusiness)
     this._router.navigate(["topbusinessdetails/" , index])
   }
 

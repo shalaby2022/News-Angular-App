@@ -27,8 +27,8 @@ export class HeadlineComponent implements OnInit {
       console.log("results : " , res.articles)
       this.headlineArray = res.articles
     },(err:any)=>{
-      this.headlineArray=staticTopBusinessHeadline.map((ele:any) =>{
-        return ele
+      this.headlineArray=staticTopBusinessHeadline.map((ele:any ,index:any) =>{
+        return {...ele , id:index}
       });
     })
 

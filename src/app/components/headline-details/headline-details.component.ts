@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FetchDataServiceService } from 'src/app/fetch-data-service.service';
+import { staticTopBusinessHeadline } from 'src/app/staticData';
 
 @Component({
   selector: 'app-headline-details',
@@ -19,11 +20,23 @@ export class HeadlineDetailsComponent implements OnInit {
     console.log("id is ..." , headlineID)
     this._headlineData.getHeadLineData().subscribe((res:any)=>{
       this.headlineFetch = res.articles
+      
       this.headlineDetails = this.headlineFetch.find(( elem:any , index:number)=>{
         if(index == headlineID){
+          console.log('headlineDEtails',elem)
           return elem
         }
       })
+    },(err)=>{
+      console.log('thorw Error')
+      this.headlineFetch=staticTopBusinessHeadline.map((ele:any,index:any)=>{
+        return {...ele,id:index}
+      })
+      this.headlineDetails=this.headlineFetch.find((ele,index)=>{
+        return index ==headlineID;
+      })
+      console.log('headLineDetails',this.headlineDetails)
+
     })
   }
 

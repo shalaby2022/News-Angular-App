@@ -23,8 +23,8 @@ export class TopBusinessComponent implements OnInit {
     this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
       console.log(res.articles)
       this.topbusinessArray = res.articles
-    },(err)=>{this.topbusinessArray=staticTopBusiness.map((ele:any) =>{
-      return ele
+    },(err)=>{this.topbusinessArray=staticTopBusiness.map((ele:any ,index:any) =>{
+      return {...ele,id:index}
     })})
 
 

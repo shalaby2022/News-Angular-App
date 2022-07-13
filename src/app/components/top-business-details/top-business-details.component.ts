@@ -1,6 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { FetchDataServiceService } from './../../fetch-data-service.service';
 import { Component, OnInit } from '@angular/core';
+import { staticTopBusiness } from 'src/app/staticData';
 
 @Component({
   selector: 'app-top-business-details',
@@ -25,6 +26,14 @@ export class TopBusinessDetailsComponent implements OnInit {
           console.log("elems" , elem)
           return elem
         }
+      })
+    },
+    (err)=>{
+      this.topBusinessArr=staticTopBusiness.map((ele:any,index:any)=>{
+        return {...ele, id:index}
+      })
+      this.topBusinessDetails=this.topBusinessArr.find((ele:any,index:any)=>{
+         return index ==topbusinessID;
       })
     })
   }
