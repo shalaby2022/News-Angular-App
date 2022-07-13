@@ -3,42 +3,36 @@
 
 <ng-container *ngIf="inputValue == ''; else second">
   <div class="container  mt-5">
-    <div class="row  pb-5">
-      
-        <h2
-         class="mt-5 text-light"><i class="fab fa-accusoft me-2"></i>Headlines</h2>
-        <div class=" col-5">
-      <div *ngFor="let headline of HeadlineItems" class="my-4">
-        <app-home-headline-cards [headline]="headline"></app-home-headline-cards>  
+    <div class="row  pb-5  ">
+
+      <h2 class="mt-5 text-light"><i class="fab fa-accusoft me-2"></i>Headlines</h2>
+      <div class=" col-md-6 col-xs-12">
+        <div *ngFor="let headline of HeadlineItems" class="my-4">
+          <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
+        </div>
+        <a routerLink="/headline" class="w-25  d-block  mt-5  ">
+          <button type="button" class="btnMore  " style="min-width: 150px">VIEW MORE</button>
+        </a>
       </div>
-      <a routerLink="/headline" class="w-25 m-auto d-block  mt-5 ">
-        <button type="button" class="btnMore  ">VIEW MORE</button>
-      </a>
-    </div>
       <div class="col-5">
         <img src="">
-      </div> 
-    
-    </div>
-
-      <div  class="row ">
-        <div class="py-5">
-          <hr class="rounded bg-white">
-
-        </div>
-        <h2 class="mt-5 text-light mb-5"><i class="fab fa-accusoft me-2"></i>Business</h2>
-        <div  class="d-flex  flex-wrap ">
-          <div *ngFor="let topbusiness of TopbusinessItem" class="col-4 my-4 ">
-            <app-home-topbusiness-cards [topbusiness]="topbusiness" ></app-home-topbusiness-cards>
-          </div>
-    </div>
-    <a routerLink="/business" class=" text-decoration-none mt-5">
-      <button type="button" class="btnMore  d-block m-auto ">VIEW MORE</button>
-    </a>
       </div>
-     
- 
+    </div>
+    
+    <hr class="rounded bg-white my-5">
+    <h2 class="mt-5 text-light mb-5"><i class="fab fa-accusoft me-2"></i>Business</h2>
+    <div class="row  justify-content-start align-items-center">
+      <div *ngFor="let topbusiness of TopbusinessItem" class="col-lg-4 col-md-6 col-xs-12 my-3">
+        <app-home-topbusiness-cards [topbusiness]="topbusiness"></app-home-topbusiness-cards>
+      </div>
+    </div>
+    <a routerLink="/business" class=" text-decoration-none mt-5 d-flex justify-content-start">
+      <button type="button" class="btnMore  d-block  ">VIEW MORE</button>
+    </a>
   </div>
+
+
+
 </ng-container>
 
 <ng-template #second>
@@ -79,5 +73,5 @@
         </div>
       </div>
   </div> -->
-<app-search-cards [filteredData]="filteredData"></app-search-cards>
+  <app-search-cards [filteredData]="filteredData"></app-search-cards>
 </ng-template>

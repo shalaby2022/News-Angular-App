@@ -1,11 +1,11 @@
 <div class="text-center searchCards " >
     <div class="container">
       <div class="row my-5 py-5  align-items-center" >
-        <div class="" *ngFor="let data of filteredData;let i =index" style="width:20rem">
+        <div class="col-lg-4 col-md-6 col-xs-12" *ngFor="let data of filteredData;let i =index" >
           <div class="card bg-black" [style]="{ height:'410px',margin:'50px 0' }"  data="homeData">
            
               <div> 
-                 <img [src]="data.urlToImage" class="img-fluid"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
+                 <img [src]="data.urlToImage" class="w-100"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
                  
               </div>
               <div class="card-body text-white my-3 text-start">

@@ -1,33 +1,44 @@
-<div class="w-100 bgImg  ">
-    <form #login="ngForm"  (ngSubmit)="addData(login)" class="w-50 fw-bold fs-5 mx-auto px-5 py-2 border border-primary rounded-3"> 
-        <legend class="text-center fs-1 fw-bold text-light my-3">Please Login</legend>
 
-        <div class="my-4">
-            <label for="Email" class="my-1 text-light fw-bold">Email</label>
-            <input type="Email" name="Email" id="Email" #Email="ngModel" ngModel required email class="form-control p-1 fw-bold fs-3"
-            [ngClass]="{'is-invalid' : (Email.invalid && Email.touched)}">
-            <div *ngIf="isValid || (Email.invalid && Email.touched)">
-                <p *ngIf="Email.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
-                <p *ngIf="Email.errors?.['email']" class="text-danger fw-bold fs-4">This Email is Invalid</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 pt-5">
+            <div class="w-100 bgImg  ">
+                <form #login="ngForm"  (ngSubmit)="addData(login)" class=" fw-bold fs-5  px-5 py-2 border border-warning rounded-3"> 
+                    <legend class="text-center fs-1 fw-bold text-light my-3">Please Login</legend>
+            
+                    <div class="my-4">
+                        <label for="Email" class="my-1 text-light fw-bold">Email</label>
+                        <input type="Email" name="Email" id="Email" #Email="ngModel" ngModel required email class="form-control p-1 fw-bold fs-3"
+                        [ngClass]="{'is-invalid' : (Email.invalid && Email.touched)}">
+                        <div *ngIf="isValid || (Email.invalid && Email.touched)">
+                            <p *ngIf="Email.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
+                            <p *ngIf="Email.errors?.['email']" class="text-danger fw-bold fs-4">This Email is Invalid</p>
+                        </div>
+                    </div>
+            
+                    <div class="my-4">
+                        <label for="Password" class="my-1 text-light fw-bold">Password</label>
+                        <input type="Password" name="Password" id="Password" #Password="ngModel" ngModel required  class="form-control p-1 fw-bold fs-3"
+                        [ngClass]="{'is-invalid' : (Password.invalid && Password.touched)}">
+                        <div *ngIf=" isValid || (Password.invalid && Password.touched)">
+                            <p *ngIf="Password.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
+                        </div>
+                    </div>
+            
+                    <div class="my-5">
+                        <input type="submit" value="Login" class="btn btn-warning btn-lg px-5 fw-bold fs-4">
+                    </div>
+            
+                    <div class="my-5">
+                        <h2 class="text-center text-light">Don't have account? <a routerLink="/auth/register" class="text-decoration-underline text-warning">Register</a></h2>
+                    </div>
+                
+                </form>
             </div>
+            
         </div>
-
-        <div class="my-4">
-            <label for="Password" class="my-1 text-light fw-bold">Password</label>
-            <input type="Password" name="Password" id="Password" #Password="ngModel" ngModel required  class="form-control p-1 fw-bold fs-3"
-            [ngClass]="{'is-invalid' : (Password.invalid && Password.touched)}">
-            <div *ngIf=" isValid || (Password.invalid && Password.touched)">
-                <p *ngIf="Password.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
-            </div>
+        <div class="col-lg-6 d-none d-lg-block py-5">
+            <img  class="rounded" src="https://image.freepik.com/free-vector/closed-padlock-digital-background-black-cyber-security_42077-4581.jpg" style="width:100%;object-fit:cover;height: 562px;" alt="">
         </div>
-
-        <div class="my-5">
-            <input type="submit" value="Login" class="btn btn-primary btn-lg px-5 fw-bold fs-4">
-        </div>
-
-        <div class="my-5">
-            <h2 class="text-center text-light">Don't have account? <a routerLink="/auth/register" class="text-decoration-underline text-primary">Register</a></h2>
-        </div>
-    
-    </form>
+    </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="card bg-black  border" style="width: 25rem;">
+<div class="card bg-black  border" >
   <div> 
      <img [src]="headline.urlToImage" class="card-img-top w-100 "  alt="..."  style="height:200px;
      border-top-left-radius:1rem;border-top-right-radius:1rem" />
@@ -15,8 +15,8 @@
 
     <div class="button-wrapper d-flex align-items-center justify-content-around">
 
-      <button class="btn btn-warning"  (click)="showDetails(index)">Show details</button>
-      <button class="btn btn-warning " (click)="saveToRead()">SaveToRead</button>
+      <button class="btn btn-warning" style="max-width:200px"  (click)="showDetails(index)">ShowDetails</button>
+      <button class="btn btn-warning " style="max-width:200px" (click)="saveToRead()">SaveToRead</button>
     </div>
   
   </div>
