@@ -48,12 +48,13 @@ export class HomeComponent implements OnInit {
     },
       (err: any) => {
         console.log("Error");
-        this.fetchedHeadlineData = staticTopBusinessHeadline.map(ele => {
-          return { ...ele, reading: false }
-        });
-        this.HeadlineItems = staticTopBusinessHeadline.map(ele => {
+        const dumHeadLineData=staticTopBusinessHeadline.slice(0,3);
+        
+        
+        this.HeadlineItems = dumHeadLineData.map(ele => {
           return { ...ele, reading: false }
         })
+        console.log('headlineItems',this.HeadlineItems)
       },
       () => console.log("complete"))
 
@@ -65,13 +66,14 @@ export class HomeComponent implements OnInit {
     },
       (err: any) => {
         console.log("Error")
-        this.fetchedTopbusinessData = staticTopBusiness.map((ele: any, index: any) => {
-          return ele;
-        })
-        this.TopbusinessItem = staticTopBusiness.map((ele: any) => {
+        const dumStatictopBusiness=staticTopBusiness.slice(0,3);
+        
+      
+        console.log('fetchedData',this.fetchedTopbusinessData)
+        this.TopbusinessItem = dumStatictopBusiness.map((ele: any) => {
           return ele
         })
-        console.log('headline', this.HeadlineItems)
+        
       },
       () => console.log("complete"))
 
@@ -79,7 +81,7 @@ export class HomeComponent implements OnInit {
       this.filteredData = res;
 
     }, (err: any) => {
-      this.filteredData = [...this.fetchedHeadlineData, ...this.fetchedTopbusinessData]
+      this.filteredData = [...this.HeadlineItems, ...this.TopbusinessItem]
     })
     this.search.inputValue.subscribe(res => {
       this.inputValue = res;
