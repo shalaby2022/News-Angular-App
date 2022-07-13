@@ -12,12 +12,19 @@ hr.solid {
 
   .reading-link {
     position: relative;
+    width:45px
   }
   .reading-link span{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 60%;
     font-weight: bold;
     font-size: 30px;
     transform: translate(-50%,-50%);
+  }
+
+  @media(max-width:768px){
+    .align-items-center{
+      align-items: flex-start !important;
+    }
   }
