@@ -25,7 +25,7 @@ export class ReadingListComponent implements OnInit {
     localStorage.setItem('readingList',JSON.stringify(this.list))
   }
 
-  navigateToDetails(item:any){
+  navigateToDetails(item:any,index:any){
    item.category=='headline'? this.router.navigate([`headlinedetails/${item.id}`]):this.router.navigate([`/topbusinessdetails/${item.id}`])
   }
 
