@@ -2,12 +2,12 @@
 import { readingList_Add, removeFromList } from "./readingList.action";
 import {createReducer,on} from '@ngrx/store'
 
-export const initialState:Array<any>=[]
+export const initialState:Array<any>= JSON.parse(localStorage.getItem('readingList')!)||[]
 const  readingListReducer=createReducer(
     initialState,
     on(readingList_Add, (state,action)=>{
         const exist=state.find((ele )=>{
-            return ele.content.id ==action.content.id;
+            return ele.content.id ==action.content.id && ele.content.category == action.content.category;
         })
        
         if(!exist){

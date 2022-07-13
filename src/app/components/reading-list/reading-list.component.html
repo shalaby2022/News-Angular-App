@@ -1,7 +1,7 @@
 <div class="container">
     
         <div *ngIf="list.length;else second">
-            <div class="row">
+            <div class="row readingList">
 
                 <div class="col-lg-10 mx-auto">
                     <table class="table">
@@ -22,14 +22,19 @@
 
                                 <!-- <td>{{i}}</td> -->
                                 <td>
-                                    <h5>{{item.content.author}}</h5>
+                                    <h5>{{item.content.author ||"Dummy Author" }}</h5>
                                 </td>
                                 <td style="text-overflow:ellipsis">
                                     <p>{{item.content.title}}</p>
                                 </td>
-                                <td>
-                                    <img [src]="item.content.urlToImage" alt="" style="object-fit: cover;"
-                                        class="rounded img-fluid">
+                                <td >
+                                    
+                                    <div class="img-wrapper">
+
+                                        <img  [src]="item.content.urlToImage" alt="" style="object-fit: cover ;cursor: pointer;"
+                                            class="rounded img-fluid" (click)="navigateToDetails(item.content)">
+                                        <span class="flag rounded">{{item.content.category}}</span>
+                                    </div>
                                 </td>
                                 <td style="max-lines: 2;max-width:200px;text-overflow:ellipsis">
                                     <p class="lead">{{item.content.content}}</p>
