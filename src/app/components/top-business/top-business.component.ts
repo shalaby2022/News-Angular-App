@@ -1,6 +1,8 @@
 import { FetchDataServiceService } from './../../fetch-data-service.service';
 import { Component, OnInit } from '@angular/core';
 import { staticTopBusiness } from 'src/app/staticData';
+import { SearchService } from '../search/search.service';
+import { HideShowSearchService } from '../search/hide-show-search.service';
 
 @Component({
   selector: 'app-top-business',
@@ -10,16 +12,35 @@ import { staticTopBusiness } from 'src/app/staticData';
 export class TopBusinessComponent implements OnInit {
 
   topbusinessArray : Array<any> = []
-
-  constructor(private _topbusinessFetch : FetchDataServiceService) { }
+  filteredData:any;
+  inputValue:any;
+  constructor(private _topbusinessFetch : FetchDataServiceService
+    ,private search:SearchService,
+    private searchStatus:HideShowSearchService) { }
 
   ngOnInit(): void {
+    this.searchStatus.display.next('block')
     this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
       console.log(res.articles)
       this.topbusinessArray = res.articles
-    },(err)=>{this.topbusinessArray=staticTopBusiness.map(ele =>{
-      return {...ele,reading:false}
+    },(err)=>{this.topbusinessArray=staticTopBusiness.map((ele:any) =>{
+      return ele
     })})
+
+
+    this.search.getFilteredData().subscribe((res:any) => {
+      this.filteredData= res;
+  
+    }, (err: any) => {
+      this.filteredData = [...this.topbusinessArray]
+    })
+    this.search.inputValue.subscribe(res => {
+      this.inputValue = res;
+  
+    })
   }
 
+ngOnDestroy(){
+  this.searchStatus.display.next('none')
+}
 }

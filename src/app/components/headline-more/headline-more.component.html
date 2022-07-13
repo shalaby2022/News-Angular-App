@@ -1,11 +1,16 @@
 <div class="card bg-black  border" style="width: 25rem;">
   <div> 
-     <img [src]="headline.urlToImage" class="card-img-top w-100 "  alt="..."  />
-     <i class="fa-solid fa-circle-star"></i>
+     <img [src]="headline.urlToImage" class="card-img-top w-100 "  alt="..."  style="height:200px;
+     border-top-left-radius:1rem;border-top-right-radius:1rem" />
   </div>
   <div class="card-body">
-    <h5 class="card-title">{{ headline.author }}</h5>
-    <p class="card-text">{{headline.title}}</p>
+    <h5 class="card-title" >{{ headline.author }}</h5>
+    <p class="card-text" style=" overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    ">{{headline.title}}</p>
     <p>{{headline.publishedAt|date}}</p>
 
     <div class="button-wrapper d-flex align-items-center justify-content-around">

@@ -1,7 +1,4 @@
-
-
-
-.btnMore{
+.searchCards .btnMore{
     border: 1px solid #000;
     padding: 10px 20px;
     background: #fcb900;
@@ -9,10 +6,9 @@
     border-radius: 10px;
 }
 
-.btnMore:hover{
+.searchCards .btnMore:hover{
 
     color: #fcb900;
     background: transparent;
     border: 1px solid #fcb900;
 }
-

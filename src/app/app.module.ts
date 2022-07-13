@@ -26,6 +26,7 @@ import { SearchComponent } from './components/search/search.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import readingListReducer from './readingListStore/readingList.reducer';
+import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import readingListReducer from './readingListStore/readingList.reducer';
     SearchComponent,
     SliderComponent,
     FooterComponent,
+    SearchCardsComponent,
  
    
   ],

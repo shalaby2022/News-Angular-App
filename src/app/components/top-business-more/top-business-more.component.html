@@ -1,8 +1,13 @@
 <div class="card  bg-black " style="width: 25rem;">
-  <img [src]="topbusiness.urlToImage" class="card-img-top " alt="...">
+  <img [src]="topbusiness.urlToImage" class="card-img-top w-100 "  alt="..."  style="height:200px;
+     border-top-left-radius:1rem;border-top-right-radius:1rem;object-fit: cover;" />
   <div class="card-body ">
     <h5 class="card-title">{{ topbusiness.author }}</h5>
-    <p class="card-text">{{topbusiness.title}}</p>
+    <p class="card-text" style=" overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;">{{topbusiness.title}}</p>
     <p>{{topbusiness.publishedAt|date}}</p>
     
 
