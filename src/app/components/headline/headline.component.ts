@@ -25,10 +25,12 @@ export class HeadlineComponent implements OnInit {
     this.searchStatus.display.next('block')
     this._headlineData.getHeadLineData().subscribe((res:any)=>{
       console.log("results : " , res.articles)
-      this.headlineArray = res.articles
+      this.headlineArray = res.articles.map((ele:any,index:any)=>{
+        return {...ele,id:index,category:'headline'}
+      })
     },(err:any)=>{
       this.headlineArray=staticTopBusinessHeadline.map((ele:any ,index:any) =>{
-        return {...ele , id:index}
+        return {...ele , id:index , category:'headline'}
       });
     })
 
