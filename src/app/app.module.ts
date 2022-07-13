@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 
@@ -27,6 +27,8 @@ import { SliderComponent } from './components/slider/slider.component';
 import { FooterComponent } from './components/footer/footer.component';
 import readingListReducer from './readingListStore/readingList.reducer';
 import { SearchCardsComponent } from './components/search-cards/search-cards.component';
+import { LanguageInterceptor } from './language.interceptor';
+
 
 
 @NgModule({
@@ -61,7 +63,9 @@ import { SearchCardsComponent } from './components/search-cards/search-cards.com
     FormsModule,
     StoreModule.forRoot({readingList:readingListReducer})
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LanguageInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
