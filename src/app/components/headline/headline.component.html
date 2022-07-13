@@ -1,9 +1,53 @@
-<div class="container-fluid bg-black">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 mt-5" *ngFor="let headline of headlineArray ; let i=index">
-                <app-headline-more [headline]="headline" [index] = "i"></app-headline-more>
+<ng-container *ngIf="inputValue=='' else second">
+
+    <div class="container-fluid bg-black py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-5" *ngFor="let headline of headlineArray ; let i=index">
+                    <app-headline-more [headline]="headline" [index] = "i"></app-headline-more>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</ng-container>
+
+<ng-template #second>
+    <!-- <div class="text-center  " >
+      <div class="container">
+        <div class="row justify-content-center g-4 align-items-center my-5 py-5">
+          <div class="" *ngFor="let data of filteredData;let i =index" style="width:20rem">
+            <div class="card bg-black" [style]="{ height:'410px' }"  data="homeData">
+             
+                <div> 
+                   <img [src]="data.urlToImage" class="img-fluid"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
+                   
+                </div>
+                <div class="card-body text-white my-3 text-start">
+                  <h5 class="card-title" style="
+                  overflow:hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;">{{ data.author }}</h5>
+                  <p class="card-text" style="overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;">{{data.title}}</p>
+                  <p>{{data.publishedAt|date}}</p>
+              
+                  <div class="button-wrapper d-flex align-items-center justify-content-around">
+              
+                    <button class="btn btn-warning btnMore"  (click)="showDetails(i)">Show details</button>
+                    <button class="btn btn-warning btnMore" (click)="saveToRead(i)">SaveToRead</button>
+                  </div>
+                
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </div> -->
+  <app-search-cards [filteredData]="filteredData"></app-search-cards>
+  </ng-template>

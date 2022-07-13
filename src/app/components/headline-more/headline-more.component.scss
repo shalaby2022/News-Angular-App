@@ -34,19 +34,20 @@ h6{
 
 
   .button-wrapper button{
-    background-color: #fcb900;
+    background-color:#fcb900;
     font-weight: 400;
     border: 2px solid black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: 0.3s all;
-
+    
 
   }
 
   .button-wrapper button:hover{
     background:transparent;
     border:2px solid #fcb900;
-    color: #f1f1f1;
+    background-color: transparent;
+    color: #fcb900;
   }
 
   

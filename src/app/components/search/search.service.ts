@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 
 
 // import { FetchDataServiceService } from './fetch-data-service.service';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { FetchDataServiceService } from 'src/app/fetch-data-service.service';
 import { staticTopBusiness, staticTopBusinessHeadline } from 'src/app/staticData';
+// import { staticTopBusiness, staticTopBusinessHeadline } from 'src/app/staticData';
 
 
 // mainly fetching the data from the apis and 
@@ -50,10 +51,10 @@ export class SearchService {
     // filtering the ariticle based on The title ,author,desc,content
     this.saveFilteredData=this.news.filter((item:any)=>{
      
-     return (String(item.content)).toLowerCase().trim().startsWith(target.toLowerCase())||
-            (String(item.author)).toLowerCase().trim().startsWith(target.toLowerCase()) ||
-            (String(item.title)).toLowerCase().trim().startsWith(target.toLowerCase())||
-            (String(item.description)).toLowerCase().trim().startsWith(target.toLowerCase());
+     return( 
+            (String(item.author)).toLowerCase().trim().includes(target.toLowerCase()) ||
+            (String(item.title)).toLowerCase().trim().includes(target.toLowerCase()))
+            
  
      })
      if(this.saveFilteredData.length){
