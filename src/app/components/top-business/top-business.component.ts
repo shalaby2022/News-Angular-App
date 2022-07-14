@@ -46,5 +46,6 @@ export class TopBusinessComponent implements OnInit {
 
 ngOnDestroy(){
   this.searchStatus.display.next('none')
+  this.search.inputValue.next('')
 }
 }
