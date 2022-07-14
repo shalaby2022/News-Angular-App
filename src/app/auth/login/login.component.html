@@ -8,7 +8,7 @@
             
                     <div class="my-4">
                         <label for="Email" class="my-1 text-light fw-bold">Email</label>
-                        <input type="Email" name="Email" id="Email" #Email="ngModel" ngModel required email class="form-control p-1 fw-bold fs-3"
+                        <input type="Email" name="Email" id="Email" #Email="ngModel" ngModel required email class="form-control p-1 fw-bold fs-3 border-warning border-3"
                         [ngClass]="{'is-invalid' : (Email.invalid && Email.touched)}">
                         <div *ngIf="isValid || (Email.invalid && Email.touched)">
                             <p *ngIf="Email.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
@@ -18,7 +18,7 @@
             
                     <div class="my-4">
                         <label for="Password" class="my-1 text-light fw-bold">Password</label>
-                        <input type="Password" name="Password" id="Password" #Password="ngModel" ngModel required  class="form-control p-1 fw-bold fs-3"
+                        <input type="Password" name="Password" id="Password" #Password="ngModel" ngModel required  class="form-control p-1 fw-bold fs-3 border-warning border-3"
                         [ngClass]="{'is-invalid' : (Password.invalid && Password.touched)}">
                         <div *ngIf=" isValid || (Password.invalid && Password.touched)">
                             <p *ngIf="Password.errors?.['required']" class="text-danger fw-bold fs-4">Email Field is Required</p>
