@@ -12,7 +12,7 @@
                                 <th>Title</th>
                                 <th>image</th>
                                 
-                                <th class="d-none d-lg-block d-xl-block">Content</th>
+                                <th>Category</th>
                                 <th>Delete</th>
                             </tr>
 
@@ -25,25 +25,19 @@
                                 <td>
                                     <h5>{{item.content.author ||"Dummy Author" }}</h5>
                                 </td>
-                                <td style="text-overflow:ellipsis">
-                                    <p>{{item.content.title}}</p>
+                                <td  >{{item.content.title}}
+                                  
                                 </td>
-                                <td >
+                                <td  class="w-25">
                                     
-                                    <div class="img-wrapper">
+                                    
 
                                         <img  [src]="item.content.urlToImage" alt="" style="object-fit: cover ;cursor: pointer ; "
                                             class="rounded w-100" (click)="navigateToDetails(item.content,i)">
-                                        <span class="flag rounded">{{item.content.category}}</span>
-                                    </div>
+
+                                  
                                 </td>
-                                <td  class="d-none d-lg-block d-xl-block" style=" overflow:hidden;
-                                text-overflow: ellipsis;
-                                display: -webkit-box;
-                                -webkit-line-clamp: 2;
-                                -webkit-box-orient: vertical;">
-                                    {{item.content.content}}
-                                </td>
+                               <td>{{item.content.category}}</td>
                                 <td>
                                     <i class="fa-solid fa-trash " (click)="deletFromList(i)"></i>
                                 </td>
