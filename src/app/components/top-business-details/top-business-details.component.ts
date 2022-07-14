@@ -18,12 +18,10 @@ export class TopBusinessDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const topbusinessID = this._activeRoute.snapshot.params["id"]
-    console.log('topbusinessID' , topbusinessID)
     this._topBusinessData.getTopBusinessData().subscribe((res)=>{
       this.topBusinessArr = res.articles
       this.topBusinessDetails =  this.topBusinessArr.find((elem:any , index:number)=>{
         if(index == topbusinessID){
-          console.log("elems" , elem)
           return elem
         }
       })

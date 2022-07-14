@@ -21,7 +21,7 @@ export class TopBusinessComponent implements OnInit {
   ngOnInit(): void {
     this.searchStatus.display.next('block')
     this._topbusinessFetch.getTopBusinessData().subscribe((res)=>{
-      console.log(res.articles)
+     
       this.topbusinessArray = res.articles.map((ele:any,index:any)=>{
         return {...ele,id:index,category:'business'}
       })

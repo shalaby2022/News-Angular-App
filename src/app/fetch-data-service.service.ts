@@ -14,8 +14,8 @@ export class FetchDataServiceService {
 
 // for working Static With Status error 
 // i did add 7 at the end of the api
-  HeadlineURL:string = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=cfbdb104ea384558b5df3642c9b449177' 
-  TopbusinessURL:string = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cfbdb104ea384558b5df3642c9b449177" 
+  HeadlineURL:string = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=cfbdb104ea384558b5df3642c9b44917' 
+  TopbusinessURL:string = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cfbdb104ea384558b5df3642c9b44917" 
 
 
   constructor(private _httpClient : HttpClient) { }

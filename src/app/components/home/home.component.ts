@@ -40,42 +40,41 @@ export class HomeComponent implements OnInit {
 
     this.searchStatus.display.next('block')
     this.fetchedHeadlineData = this._dataService.getHeadLineData().subscribe((res: any) => {
-      console.log(res.articles);
+     
       this.HeadlineItems = res.articles
       this.HeadlineItems = this.HeadlineItems.sort(() => Math.random() - 0.5)
       this.HeadlineItems = this.HeadlineItems.slice(7)
-      console.log("new product is ... ", this.HeadlineItems)
+      
     },
       (err: any) => {
-        console.log("Error");
+       
         const dumHeadLineData=staticTopBusinessHeadline.slice(0,3);
         
         
         this.HeadlineItems = dumHeadLineData.map(ele => {
           return { ...ele, reading: false }
         })
-        console.log('headlineItems',this.HeadlineItems)
+        
       },
-      () => console.log("complete"))
+      () => {})
 
     this.fetchedTopbusinessData = this._dataService.getTopBusinessData().subscribe((res: any) => {
-      console.log("top bustiness result ", res.articles.slice(14))
+      
       this.TopbusinessItem = res.articles
       this.TopbusinessItem = this.TopbusinessItem.sort(() => Math.random() - 0.5)
       this.TopbusinessItem = this.TopbusinessItem.slice(17)
     },
       (err: any) => {
-        console.log("Error")
+        
         const dumStatictopBusiness=staticTopBusiness.slice(0,3);
         
       
-        console.log('fetchedData',this.fetchedTopbusinessData)
         this.TopbusinessItem = dumStatictopBusiness.map((ele: any) => {
           return ele
         })
         
       },
-      () => console.log("complete"))
+      () => {})
 
     this.search.getFilteredData().subscribe(res => {
       this.filteredData = res;
@@ -88,18 +87,16 @@ export class HomeComponent implements OnInit {
 
     })
 
-    this.searchStatus.getSearchStatus().subscribe(res =>console.log('res',res))
+    this.searchStatus.getSearchStatus().subscribe(res =>res)
   }
 
   saveToRead(index:any) {
     // this._route.navigate(['/readingList'])
-    console.log('index',index)
-    console.log('data',this.filteredData[index])
+    
     this.store.dispatch(readingList_Add({ content: { ...this.filteredData[index], id: index, category: 'headline' } }))
   }
 
   showDetails(index: number) {
-    console.log("headline index is ... ", index)
     this._route.navigate(["headlinedetails/", index])
   }
 
