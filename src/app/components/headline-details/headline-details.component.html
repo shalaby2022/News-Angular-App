@@ -1,8 +1,21 @@
+<div class="container  " style="padding:150px 0">
 
-<div class="container w-50 m-auto py-5">
-    <img class="img-fluid my-5" [src]="headlineDetails.urlToImage">
-    <h6 class="text-white">Author : {{headlineDetails.author}}</h6>
-    <h6 class="text-white">Date :  {{headlineDetails.publishedAt | date : 'mediumDate'}}</h6>
-    <h3 class="text-white my-3">{{headlineDetails.title}}</h3>
-    <p class="text-white pb-5">{{headlineDetails.description}}</p>
+    <div class="details row ">
+        <div class="img-wrapper border-secondary col-md-6 col-xs-12"> 
+            <img class="w-100 my-5 rounded img-thumbnail" [src]="headlineDetails.urlToImage" style="border:3px solid orange">
+        </div>
+        <div class="content-container col-md-6 py-md-5 col-xs-12 align-self-center" style="padding:15px 40px">
+            <h6 class="text-white">Author : {{headlineDetails.author}}</h6>
+            <div class="rounded"  style="height: 3px ; width:50%; margin:10px 0;background:orange"></div>
+            <h6 class="text-white">Date : {{headlineDetails.publishedAt | date : 'mediumDate'}}</h6>
+            <div class="rounded"  style="height: 3px ; width:30%; margin:10px 0;background:orange"></div>
+
+            <h3 class="text-white my-3">{{headlineDetails.title}}</h3>
+            <div class="rounded"  style="height: 3px ; width:20%; margin:10px 0;background:orange"></div>
+
+            <p class="text-white pb-5">{{headlineDetails.description}}</p>
+
+
+        </div>
+    </div>
 </div>
