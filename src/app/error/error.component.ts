@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorComponent implements OnInit {
 
+  errorsrc:string = "../../assets/error.png";
   constructor() { }
 
   ngOnInit(): void {
