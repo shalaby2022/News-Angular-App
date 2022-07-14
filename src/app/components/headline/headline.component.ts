@@ -24,7 +24,6 @@ export class HeadlineComponent implements OnInit {
   ngOnInit(): void {
     this.searchStatus.display.next('block')
     this._headlineData.getHeadLineData().subscribe((res:any)=>{
-      console.log("results : " , res.articles)
       this.headlineArray = res.articles.map((ele:any,index:any)=>{
         return {...ele,id:index,category:'headline'}
       })

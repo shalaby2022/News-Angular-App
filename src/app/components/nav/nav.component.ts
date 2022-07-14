@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
     this.store.subscribe(res =>{
       this.listLen=res.readingList.length;
     })
-    this.searchStatus.getSearchStatus().subscribe(res =>{console.log('res nav',res);
+    this.searchStatus.getSearchStatus().subscribe(res =>{
   this.display=res})
   }
 

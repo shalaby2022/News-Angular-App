@@ -2,7 +2,7 @@
 
     <div class="details row ">
         <div class="img-wrapper border-secondary col-md-6 col-xs-12"> 
-            <img class="w-100 my-5 rounded img-thumbnail" [src]="headlineDetails.urlToImage" style="border:3px solid orange">
+            <img class="w-100 my-5 rounded img-thumbnail" [src]="headlineDetails.urlToImage || 'http://via.placeholder.com/640x360'" style="border:3px solid orange">
         </div>
         <div class="content-container col-md-6 py-md-5 col-xs-12 align-self-center" style="padding:15px 40px">
             <h6 class="text-white">Author : {{headlineDetails.author}}</h6>
