@@ -47,5 +47,6 @@ export class HeadlineComponent implements OnInit {
   }
   ngOnDestroy(){
     this.searchStatus.display.next('none');
+    this.search.inputValue.next('')
   }
 }

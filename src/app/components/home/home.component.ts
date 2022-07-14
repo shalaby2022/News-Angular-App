@@ -106,6 +106,7 @@ export class HomeComponent implements OnInit {
   // clg home Data
  ngOnDestroy(){
   this.searchStatus.display.next('none')
+  this.search.inputValue.next('')
  }
 
 }
