@@ -6,9 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FetchDataServiceService {
+  // HeadlineURL:string = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=5511b6e00c9f46e69392688d68a92bbf'
+  // TopbusinessURL:string = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=5511b6e00c9f46e69392688d68a92bbf"
 
-  HeadlineURL:string = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=cfbdb104ea384558b5df3642c9b44917'
-  TopbusinessURL:string = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cfbdb104ea384558b5df3642c9b44917"
+
+
+
+// for working Static With Status error 
+// i did add 7 at the end of the api
+  HeadlineURL:string = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=cfbdb104ea384558b5df3642c9b44917' 
+  TopbusinessURL:string = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=cfbdb104ea384558b5df3642c9b44917" 
 
 
   constructor(private _httpClient : HttpClient) { }

@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
   isValid: boolean = false;
 
+  imagesrc:string = "../../../assets/login-img.png";
+
   constructor(private _router:Router) { }
 
   ngOnInit(): void {

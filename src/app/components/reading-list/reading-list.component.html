@@ -1,1 +1,72 @@
-<p>reading-list works!</p>
+<div    class="bg-dark">
+
+    <div class="container py-5">
+        
+            <div *ngIf="list.length;else second">
+                <div class="row readingList justify-content-center py-5">
+    
+                    <div class="col-lg-8  col-xs-12">
+                        <table class="table table-dark table-striped px-5">
+                            <thead>
+                                <tr>
+                                    <!-- <th>#id</th> -->
+                                    <th>Author</th>
+                                    <th class="title">Title</th>
+                                    <th>image</th>
+                                    
+                                    <th>Category</th>
+                                    <th class="mx-3">Delete</th>
+                                </tr>
+    
+                            </thead>
+                            <tbody>
+                                <tr class=" mb-3" *ngFor="let item of list; let i=index">
+    
+    
+                                    <!-- <td>{{i}}</td> -->
+                                    <td >
+                                        <h5>{{item.content.author ||"Dummy Author" }}</h5>
+                                      
+                                    </td>
+                                    
+                                    <td  class="w-sm-50 w-25 text-start title">{{item.content.title}}
+                                      
+                                    </td>
+                                    <td  class="w-25">
+                                        
+                                        
+    
+                                            <img  [src]="item.content.urlToImage" alt="" style="object-fit: cover ;cursor: pointer ;min-width:100px "
+                                                class="rounded w-100" (click)="navigateToDetails(item.content,i)">
+    
+                                      
+                                    </td>
+                                   <td>{{item.content.category}}</td>
+                                    <td>
+                                        <i  class="fa-solid fa-trash mx-3" (click)="deletFromList(i)"></i>
+                                    </td>
+                                </tr> 
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+
+
+
+            
+            <ng-template #second>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto "style="text-align:'center'; color:'orange'">
+                        <span style="font-size: 100px">😯</span>
+                        <h2>Your Reading List is Empty </h2>
+                        <a  class="h2" routerLink="/home" style="text-decoration: none;color:'orange'">GOHOME</a>
+                    </div>
+                </div>
+            </ng-template>
+    
+       
+    </div>
+</div>

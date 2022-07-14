@@ -1,0 +1,59 @@
+
+
+
+.readingList tr{
+    color: white !important;
+    text-align: center;
+    
+   
+}
+
+.readingList th{
+    text-align: center;
+
+}
+
+.readingList td{
+   
+    text-align: center;
+    vertical-align: middle;
+    padding:  10px;
+    
+}
+
+tr:nth-child(odd){
+    color: orange !important;
+}
+@media(max-width:768px){
+    td h5{
+        max-width:100px;
+        font-size: 14px;
+    }
+
+    .title{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+.readingList i.fa-trash{
+    color: orange;
+    font-size: 3rem;
+    transition: 0.3s all;
+}
+.readingList i.fa-trash:hover{
+    color: rgb(184, 121, 4);
+    cursor: pointer;
+}
+
+
+@media (max-width:768px){
+    .readingList i.fa-trash{
+        font-size: 2rem;
+    }
+}

@@ -1,35 +1,82 @@
 
-<div class="container bg-black">
-    <img [src]="imagURL" alt="hero_image" class="img-fluid w-100 m-auto" />
-  <div class="row">
-    <a routerLink="/headline">
-    <h2 class="text-white text-decoration-underline my-4">Headlines</h2>
-  </a>
-    <div *ngFor="let headline of HeadlineItems" class="col-4 my-4">
-      <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
-    </div>
-    <a routerLink="/headline" class="w-25 m-auto">
-    <button
-      pButton
-      type="button"
-      label="View more"
-      class="py-2 px-5"
-    ></button>
-  </a>
-  <a routerLink="/business">
-    <h2 class="text-white text-decoration-underline my-4">Top Business</h2>
-  </a>
-    <div *ngFor="let topbusiness of TopbusinessItem" class="col-4 my-4">
-      <app-home-topbusiness-cards [topbusiness]="topbusiness"></app-home-topbusiness-cards>
-    </div>
-    <a routerLink="/business" class="w-25 m-auto">
-    <button
-      pButton
-      type="button"
-      label="View more"
-      class="py-2 px-5"
-    ></button>
-  </a>
-  </div>
-</div>
 
+<ng-container *ngIf="inputValue == ''; else second">
+<app-slider></app-slider>
+
+  <div class="container  mt-5  " id="home">
+
+    <h2 class="mt-5 text-light"><i class="fab fa-accusoft me-2"></i>Headlines</h2>
+    <div class=" row justify-content-start align-items-center py-5">
+      <div *ngFor="let headline of HeadlineItems" class="col-lg-4 col-md-6 col-xs-12 my-3">
+        <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
+      </div>
+      <a routerLink="/headline" class=" text-decoration-none mt-5">
+        <button type="button" class="btnMore d-block w-25 mx-auto text-white fw-bold">VIEW MORE</button>
+      </a>
+    </div>
+
+    <div class="rounded  my-5" style="background-color: #2C3034;height: 2px;"></div>
+
+    <h2 class="mt-5 text-light mb-5"><i class="fab fa-accusoft me-2"></i>Business</h2>
+    
+    <div class="row  justify-content-start align-items-center">
+      <div *ngFor="let topbusiness of TopbusinessItem" class="col-lg-4 col-md-6 col-xs-12 my-3">
+        <app-home-topbusiness-cards [topbusiness]="topbusiness"></app-home-topbusiness-cards>
+      </div>
+    </div>
+
+
+    
+
+      <a routerLink="/business" class=" text-decoration-none">
+        <button type="button" class="btnMore d-block w-25 mx-auto mt-5 text-white fw-bold" >VIEW MORE</button>
+      </a>
+ 
+
+  </div>
+
+
+
+
+</ng-container>
+
+<ng-template #second>
+  <!-- <div class="text-center  " >
+    <div class="container">
+      <div class="row justify-content-center g-4 align-items-center my-5 py-5">
+        <div class="" *ngFor="let data of filteredData;let i =index" style="width:20rem">
+          <div class="card bg-black" [style]="{ height:'410px' }"  data="homeData">
+           
+              <div> 
+                 <img [src]="data.urlToImage" class="img-fluid"  alt="..."  style="border-top-left-radius:10px;border-top-right-radius:10px ;height:200px;object-fit: cover;" />
+                 
+              </div>
+              <div class="card-body text-white my-3 text-start">
+                <h5 class="card-title" style="
+                overflow:hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;">{{ data.author }}</h5>
+                <p class="card-text" style="overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;">{{data.title}}</p>
+                <p>{{data.publishedAt|date}}</p>
+            
+                <div class="button-wrapper d-flex align-items-center justify-content-around">
+            
+                  <button class="btn btn-warning btnMore"  (click)="showDetails(i)">Show details</button>
+                  <button class="btn btn-warning btnMore" (click)="saveToRead(i)">SaveToRead</button>
+                </div>
+              
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  </div> -->
+  <app-search-cards [filteredData]="filteredData"></app-search-cards>
+</ng-template>

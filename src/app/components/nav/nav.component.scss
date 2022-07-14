@@ -1,0 +1,30 @@
+nav{
+    opacity: 0.8;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  i{
+    font-size: 40px;
+    color:#ffa301;
+  }
+
+  .reading-link {
+    position: relative;
+    width:45px
+  }
+  .reading-link span{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
+  }
+
+  @media(max-width:768px){
+    .align-items-center{
+      align-items: flex-start !important;
+    }
+  }

@@ -1,20 +1,24 @@
+<div class="card   border"  style="background-color: #2C3034">
+  <div> 
+     <img [src]="headline.urlToImage ||  'https://placeholder.pics/svg/600'" class="card-img-top w-100 "  alt="..."  style="height:200px;
+     border-top-left-radius:1rem;border-top-right-radius:1rem" />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" >{{ headline.author }}</h5>
+    <p class="card-text" style=" overflow:hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    ">{{headline.title}}</p> 
+    <p>{{headline.publishedAt|date}}</p>
 
+    <div class="button-wrapper d-flex align-items-center justify-content-around">
 
-<p-card
-[style]="{ width: '300px' }"
-styleClass="p-card-shadow"
-class="text-white"
->
-<h5>{{ headline.author }}</h5>
-<p>{{headline.title}}</p>
-<ng-template pTemplate="header">
-  <img alt="Card" [src]="headline.urlToImage" [ngStyle]="{'width.%' : 50}" />
-</ng-template>
-<button
-pButton
-type="button"
-label="Show details"
-class="py-2 px-3 bg-primary text-white rounded"
-(click)="showDetails(index)"
-></button>
-</p-card>
+      <button class="btn btn-warning btn-sm rounded-3 px-3 text-white fw-bold" (click)="showDetails(index)">Details</button>
+      <button class="btn btn-warning btn-sm rounded-3 px-2" (click)="saveToRead()"><i class="fa-solid fa-bookmark text-white"></i></button>
+    </div>
+  
+  </div>
+</div>
+

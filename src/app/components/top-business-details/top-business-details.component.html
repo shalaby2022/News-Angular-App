@@ -1,8 +1,22 @@
 
-<div class="container w-50 m-auto">
-    <img class="img-fluid my-5" [src]="topBusinessDetails.urlToImage">
-    <h6 class="text-white">Author : {{topBusinessDetails.author}}</h6>
-    <h6 class="text-white">Date :  {{topBusinessDetails.publishedAt | date : 'mediumDate'}}</h6>
-    <h3 class="text-white my-3">{{topBusinessDetails.title}}</h3>
-    <p class="text-white pb-5">{{topBusinessDetails.description}}</p>
+<div class="container  " style="padding:150px 0">
+
+    <div class="details row ">
+        <div class="img-wrapper border-secondary col-md-6 col-xs-12" style=""> 
+            <img class="w-100  rounded img-thumbnail" [src]="topBusinessDetails.urlToImage || 'http://via.placeholder.com/640x360'" style="border:3px solid orange;object-fit: cover;box-shadow: 0 5px 10px rgba(226, 221, 215, 0.895);">
+        </div>
+        <div class="content-container col-md-6 py-md-5 col-xs-12 align-self-center" style="padding:15px 40px">
+            <h6 class="text-white">Author : {{topBusinessDetails.author}}</h6>
+            <div class="rounded"  style="height: 3px ; width:50%; margin:10px 0;background:orange"></div>
+            <h6 class="text-white">Date : {{topBusinessDetails.publishedAt | date : 'mediumDate'}}</h6>
+            <div class="rounded"  style="height: 3px ; width:30%; margin:10px 0;background:orange"></div>
+
+            <h3 class="text-white my-3">{{topBusinessDetails.title}}</h3>
+            <div class="rounded"  style="height: 3px ; width:20%; margin:10px 0;background:orange"></div>
+
+            <p class="text-white pb-5">{{topBusinessDetails.description}}</p>
+
+
+        </div>
+    </div>
 </div>
