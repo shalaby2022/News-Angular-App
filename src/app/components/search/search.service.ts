@@ -79,4 +79,7 @@ export class SearchService {
    getFilteredData(){
     return  this.filteredData.asObservable()
    }
+   ngOnDestroy(){
+    this.inputValue.next('')
+   }
 }
