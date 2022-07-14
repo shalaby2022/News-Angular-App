@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
+  registsrc:string = "../../../assets/regist-img.png";
+
   isSubmitted: boolean = false;
 
   constructor(private fb:FormBuilder, private _router:Router) { }

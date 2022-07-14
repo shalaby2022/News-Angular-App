@@ -3,7 +3,7 @@
     <div class="row py-5">
         <div class="col-lg-6 col-md-12 pt-5">
             <div class="w-100 bgImg  ">
-                <form #login="ngForm"  (ngSubmit)="addData(login)" class=" fw-bold fs-5  px-5 py-2 border border-warning rounded-3"> 
+                <form #login="ngForm"  (ngSubmit)="addData(login)" class=" fw-bold fs-5  px-5 py-2 "> 
                     <legend class="text-center fs-1 fw-bold text-light my-3">Please Login</legend>
             
                     <div class="my-4">
@@ -26,7 +26,7 @@
                     </div>
             
                     <div class="my-5">
-                        <input type="submit" value="Login" class="btn btn-warning btn-lg px-5 fw-bold fs-4">
+                        <input type="submit" value="Login" class="btn btn-warning btn-lg px-5 fw-bold fs-4 text-white">
                     </div>
             
                     <div class="my-5">
@@ -38,7 +38,7 @@
             
         </div>
         <div class="col-lg-6 d-none d-lg-block py-5">
-            <img  class="rounded" src="https://image.freepik.com/free-vector/closed-padlock-digital-background-black-cyber-security_42077-4581.jpg" style="width:100%;object-fit:cover;height: 562px;" alt="">
+            <img  class="rounded w-100 m-auto" [src]='imagesrc' alt="">
         </div>
     </div>
 </div>

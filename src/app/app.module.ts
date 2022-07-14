@@ -30,7 +30,7 @@ import { SearchCardsComponent } from './components/search-cards/search-cards.com
 import { LanguageInterceptor } from './language.interceptor';
 import { environment } from '../environments/environment';
 import { ServiceWorkerModule } from '@angular/service-worker';
-
+import {SplitterModule} from 'primeng/splitter';
 
 
 @NgModule({
@@ -61,12 +61,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HttpClientModule,
     CardModule,
     ButtonModule,
+    SplitterModule,
     AuthModule,
     FormsModule,
     StoreModule.forRoot({readingList:readingListReducer}),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production,registrationStrategy:'registerWhenStable:30000'})
-   
-   
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production,registrationStrategy:'registerWhenStable:30000'}),
+
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LanguageInterceptor, multi: true},
