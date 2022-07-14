@@ -5,21 +5,15 @@
 
   <div class="container  mt-5  " id="home">
 
-
-
     <h2 class="mt-5 text-light"><i class="fab fa-accusoft me-2"></i>Headlines</h2>
     <div class=" row justify-content-start align-items-center py-5">
       <div *ngFor="let headline of HeadlineItems" class="col-lg-4 col-md-6 col-xs-12 my-3">
         <app-home-headline-cards [headline]="headline"></app-home-headline-cards>
       </div>
-      <a routerLink="/headline" class="  d-block  mt-5  ">
-        <button type="button" class="btnMore  " style="min-width: 150px">VIEW MORE</button>
+      <a routerLink="/headline" class=" text-decoration-none mt-5">
+        <button type="button" class="btnMore d-block w-25 mx-auto text-white fw-bold">VIEW MORE</button>
       </a>
     </div>
-    <!-- <div class="col-5">
-        <img src="">
-      </div> -->
-
 
     <hr class="rounded bg-white my-5">
     <h2 class="mt-5 text-light mb-5"><i class="fab fa-accusoft me-2"></i>Business</h2>
@@ -32,8 +26,8 @@
 
     
 
-      <a routerLink="/business" class=" text-decoration-none mt-5">
-        <button type="button" class="btnMore  d-block mt-4 ">VIEW MORE</button>
+      <a routerLink="/business" class=" text-decoration-none">
+        <button type="button" class="btnMore d-block w-25 mx-auto mt-5 text-white fw-bold" >VIEW MORE</button>
       </a>
  
 
