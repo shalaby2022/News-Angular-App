@@ -28,6 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import readingListReducer from './readingListStore/readingList.reducer';
 import { SearchCardsComponent } from './components/search-cards/search-cards.component';
 import { LanguageInterceptor } from './language.interceptor';
+import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -61,7 +63,10 @@ import { LanguageInterceptor } from './language.interceptor';
     ButtonModule,
     AuthModule,
     FormsModule,
-    StoreModule.forRoot({readingList:readingListReducer})
+    StoreModule.forRoot({readingList:readingListReducer}),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production,registrationStrategy:'registerWhenStable:30000'})
+   
+   
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: LanguageInterceptor, multi: true},
