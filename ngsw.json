@@ -1,0 +1,125 @@
+{
+  "configVersion": 1,
+  "timestamp": 1660123392305,
+  "index": "https://shalaby2022.github.io/News-Angular-App/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://shalaby2022.github.io/News-Angular-App/favicon.ico",
+        "https://shalaby2022.github.io/News-Angular-App/index.html",
+        "https://shalaby2022.github.io/News-Angular-App/main.166b778c8728c0d1.js",
+        "https://shalaby2022.github.io/News-Angular-App/manifest.webmanifest",
+        "https://shalaby2022.github.io/News-Angular-App/polyfills.fba87f95e6080668.js",
+        "https://shalaby2022.github.io/News-Angular-App/runtime.fe979d67246f5efe.js",
+        "https://shalaby2022.github.io/News-Angular-App/scripts.a881e932f111cc83.js",
+        "https://shalaby2022.github.io/News-Angular-App/styles.6f4fcdc7f8138f9d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://shalaby2022.github.io/News-Angular-App/assets/BG.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/BG_news.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/Error.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/bg1.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/bg8.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/boot.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/error.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-1.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-2.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-3.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-128x128.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-144x144.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-152x152.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-192x192.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-384x384.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-512x512.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-72x72.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-96x96.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/login-img.png",
+        "https://shalaby2022.github.io/News-Angular-App/assets/news-break.jpg",
+        "https://shalaby2022.github.io/News-Angular-App/assets/regist-img.png",
+        "https://shalaby2022.github.io/News-Angular-App/fa-brands-400.7fa789ab57acb632.ttf",
+        "https://shalaby2022.github.io/News-Angular-App/fa-brands-400.859fc3887485de84.woff2",
+        "https://shalaby2022.github.io/News-Angular-App/fa-regular-400.2ffd018f0eda6f7b.woff2",
+        "https://shalaby2022.github.io/News-Angular-App/fa-regular-400.da02cb7e372f16a2.ttf",
+        "https://shalaby2022.github.io/News-Angular-App/fa-solid-900.3a463ec33b4fe9f7.ttf",
+        "https://shalaby2022.github.io/News-Angular-App/fa-solid-900.40ddefd79fe7af45.woff2",
+        "https://shalaby2022.github.io/News-Angular-App/fa-v4compatibility.924588dc97e66b08.ttf",
+        "https://shalaby2022.github.io/News-Angular-App/fa-v4compatibility.ee06c6f803f379bb.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://shalaby2022.github.io/News-Angular-App/assets/BG.jpg": "e603c02bfc791c39ba030276886579102a693267",
+    "https://shalaby2022.github.io/News-Angular-App/assets/BG_news.jpg": "306cf0a67f0e688aba3ce2297f4badf6a44daebb",
+    "https://shalaby2022.github.io/News-Angular-App/assets/Error.jpg": "682300d3760c3ad71061eea473854dacf9710491",
+    "https://shalaby2022.github.io/News-Angular-App/assets/bg1.jpg": "6e6095516600743ee27663dbe0865bb026da83d9",
+    "https://shalaby2022.github.io/News-Angular-App/assets/bg8.jpg": "281b91aa4502a40445436d247e683f5bf797d70f",
+    "https://shalaby2022.github.io/News-Angular-App/assets/boot.jpg": "9a0fe86925ff87cceddcac943db6e9e1d084ca63",
+    "https://shalaby2022.github.io/News-Angular-App/assets/error.png": "7bc33f5d23ce2ebf21d33b2aae97e53b889a0f79",
+    "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-1.jpg": "6ee5160b6a4224eefa49fabfe56dbe4a2643c78f",
+    "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-2.jpg": "e6d00b9bebbd461a0c49bddef77ba1c06778117d",
+    "https://shalaby2022.github.io/News-Angular-App/assets/hero-bg-3.jpg": "bd673c98a4f80afec496589d4ce6f05951275eed",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://shalaby2022.github.io/News-Angular-App/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://shalaby2022.github.io/News-Angular-App/assets/login-img.png": "7184ece097c50aab9ffef0af11646460a721b8fe",
+    "https://shalaby2022.github.io/News-Angular-App/assets/news-break.jpg": "fef77c02cabbf4e5d49ef5d9e747efb4c702ba26",
+    "https://shalaby2022.github.io/News-Angular-App/assets/regist-img.png": "eda78c7260cf89245a2ad26a194225b3387d12e8",
+    "https://shalaby2022.github.io/News-Angular-App/fa-brands-400.7fa789ab57acb632.ttf": "acc07d5e1ab5b96b23fabb53b1f4e416c7c0a46d",
+    "https://shalaby2022.github.io/News-Angular-App/fa-brands-400.859fc3887485de84.woff2": "a280ecdddd14695fad22599301ab03adfe5224c0",
+    "https://shalaby2022.github.io/News-Angular-App/fa-regular-400.2ffd018f0eda6f7b.woff2": "379ca48f70f3d4f79f8bf1079881c7c5af4f44a4",
+    "https://shalaby2022.github.io/News-Angular-App/fa-regular-400.da02cb7e372f16a2.ttf": "a14023c43173628d93858c0f3fc90cf54b18a28e",
+    "https://shalaby2022.github.io/News-Angular-App/fa-solid-900.3a463ec33b4fe9f7.ttf": "9225d6cb428fce41704cab29b8bb43b76c67f8b4",
+    "https://shalaby2022.github.io/News-Angular-App/fa-solid-900.40ddefd79fe7af45.woff2": "2717f3f58271f2f2e6120d9937c7227002656d34",
+    "https://shalaby2022.github.io/News-Angular-App/fa-v4compatibility.924588dc97e66b08.ttf": "e688e02012b9e5269a09809b0d666edc87527cb2",
+    "https://shalaby2022.github.io/News-Angular-App/fa-v4compatibility.ee06c6f803f379bb.woff2": "951ded71094a52e249ac52799fac7cbb68368270",
+    "https://shalaby2022.github.io/News-Angular-App/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://shalaby2022.github.io/News-Angular-App/index.html": "fd79ba60eb26a8210c37dab2d2b01c9f5703b738",
+    "https://shalaby2022.github.io/News-Angular-App/main.166b778c8728c0d1.js": "7ec6682d24f578b7f039a8d145a9a3b9bed91a80",
+    "https://shalaby2022.github.io/News-Angular-App/manifest.webmanifest": "c162456a99feb6d90d8deb168ce65b15cb53f1e8",
+    "https://shalaby2022.github.io/News-Angular-App/polyfills.fba87f95e6080668.js": "ba72f23f86b6b7646249311093ac8f1e91dfca26",
+    "https://shalaby2022.github.io/News-Angular-App/runtime.fe979d67246f5efe.js": "be1382563023f76666a6cd992ee7ba4ba8b27177",
+    "https://shalaby2022.github.io/News-Angular-App/scripts.a881e932f111cc83.js": "f071c80334dd74cc1a8b8d6044d58933cf76d0af",
+    "https://shalaby2022.github.io/News-Angular-App/styles.6f4fcdc7f8138f9d.css": "efd15b8d99a8bb59c255bcc6abdf7a7efee086f5"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
